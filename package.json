@@ -1,0 +1,25 @@
+{
+  "name": "putricypress",
+  "version": "1.0.0",
+  "description": "Magento",
+  "main": "index.js",
+  "scripts": {
+    "test": "--cypress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/putriewfauziahr/PutriCypress.git"
+  },
+  "keywords": [
+    "magento"
+  ],
+  "author": "putri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/putriewfauziahr/PutriCypress/issues"
+  },
+  "homepage": "https://github.com/putriewfauziahr/PutriCypress#readme",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3"
+  }
+}
