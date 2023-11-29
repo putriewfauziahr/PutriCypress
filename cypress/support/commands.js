@@ -10,7 +10,19 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+ Cypress.Commands.add('loginWithInvalidCredentials', () => {
+    cy.fixture('../fixtures/data.json').then((loginData) => {
+      const InvalidCredential = Cypress._.sample(loginData.InvalidCredential);
+      cy.visit('/');
+      cy.get('.home-main>.content>.title').should('contain', 'Get fit and look fab in new seasonal styles');
+      cy.get('.panel>.header>.authorization-link>a').click();
+      cy.get('#email').type(InvalidCredential.email);
+      cy.get('#pass').type(InvalidCredential.pass);
+      cy.get('#send2').click();
+      cy.wait(2000);
+      cy.xpath('//div[contains(text(),"The account sign-in was incorrect or your account")]').should('contain', 'The account sign-in was incorrect or your account');
+  });
+  });
 //
 //
 // -- This is a child command --

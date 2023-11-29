@@ -1,0 +1,18 @@
+{
+    "email": "putri.tester@mailinator.com",
+    "pass": "@123Testing",
+
+    "InvalidCredential":[
+        {
+            "email": "putriewwww.tester@mailinator.com",
+            "pass": "@123Testing"
+        }
+    ],
+    "ValidCredential":[
+        {
+            "email": "putri.tester@mailinator.com",
+            "pass": "@123Testing"
+        }
+    ]
+    
+}

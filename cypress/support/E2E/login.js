@@ -1,4 +1,5 @@
 require('@cypress/xpath');
+import "../commands";
 
 describe('Login', () => {
     it('Login', () => {
@@ -17,5 +18,9 @@ describe('Login', () => {
         cy.get(':nth-child(2) > .customer-welcome > .customer-menu > .header > .authorization-link > a').click();
         cy.get('.panel > .header > .authorization-link > a').should('contain', 'Sign In ');
 
+    })
+
+    it.only('Login Using Custom Commands', () => {
+        cy.loginWithInvalidCredentials();
     })
 })
