@@ -5,13 +5,17 @@
     "InvalidCredential":[
         {
             "email": "putriewwww.tester@mailinator.com",
-            "pass": "@123Testing"
+            "pass": "@123Testing",
+            "error-msg-login": "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
         }
     ],
     "ValidCredential":[
         {
             "email": "putri.tester@mailinator.com",
-            "pass": "@123Testing"
+            "pass": "@123Testing",
+            "success-msg-login": "Welcome",
+            "error-email": "This is a required field.",
+            "error-pass": "This is a required field."
         }
     ]
     
