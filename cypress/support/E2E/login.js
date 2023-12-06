@@ -1,7 +1,9 @@
 require('@cypress/xpath');
 import "../commands";
+import loginPage from '../../support/pageObjects/loginPage';
 
-describe('Login', () => {
+describe('Login and Logout', () => {
+    //Normal Login
     it('Login', () => {
         cy.visit('/');
         cy.get('.home-main>.content>.title').should('contain', 'Get fit and look fab in new seasonal styles');
@@ -17,6 +19,7 @@ describe('Login', () => {
         cy.wait(3000);
     })
 
+    //Login using Custom Commands
     it('Login Using Invalid Credential', () => {
         cy.loginWithInvalidCredentials();
         cy.wait(3000);
@@ -28,7 +31,16 @@ describe('Login', () => {
         
     })
 
-    it.only('Login Without Input Credentail', () => {
+    it('Login Without Input Credentail', () => {
         cy.LoginWithoutInputCredential();
+    })
+
+    //Login Using POM
+    it('Login Using Invalid Email Format', () => {
+        loginPage.visit();
+        loginPage.clickSignIn();
+        loginPage.inputInvalidFormatEmail();
+        loginPage.clickSignInButton();
+        loginPage.expectedInvalidFormatEmail();
     })
 })

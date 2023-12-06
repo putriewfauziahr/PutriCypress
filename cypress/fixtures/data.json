@@ -6,6 +6,8 @@
         {
             "email": "putriewwww.tester@mailinator.com",
             "pass": "@123Testing",
+            "invalid-format-email": "putri.tester",
+            "invalid-format-email-msg": "Please enter a valid email address (Ex: johndoe@domain.com).",
             "error-msg-login": "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."
         }
     ],
