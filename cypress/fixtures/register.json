@@ -1,0 +1,43 @@
+{
+    "validCredential": 
+    [
+        {
+            "firstName": "Putrii",
+            "lastName": "Tester",
+            "email": "putrii.tester3@maildrop.cc",
+            "password": "@123Testing",
+            "confirmPass":  "@123Testing"
+        }
+    ],
+
+    "weakPassword": 
+    [
+        {
+            "weakPass": "123testing"
+        }
+    ],
+
+    "mediumPassword": 
+    [
+        {
+            "mediumPass": "@123test",
+            "mediumConfirmPass": "@123test"
+        }
+    ],
+
+    "strongPassword": 
+    [
+        {
+            "strongPass": "@123testt",
+            "strongConfirmPass": "@123testt"
+        }
+    ],
+
+    "veryStrongPass": 
+    [
+        {
+            "veryStrongPass": "@123testinG",
+            "veryStrongConfirmPass": "@123testinG"
+        }
+    ]
+}
