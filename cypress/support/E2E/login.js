@@ -28,7 +28,7 @@ describe('Login and Logout', () => {
     it('Login Using Valid Credential', () => {
         cy.loginWithValidCredentials();
         cy.wait(3000);
-        
+
     })
 
     it('Login Without Input Credentail', () => {

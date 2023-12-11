@@ -1,2 +1,3 @@
 .should('be.visible') -> Is a keyword for wait until element locator is visible
 {timeout:5000}        -> Is a keyword for setting timeout
+.trigger('mouseover'); -> Hover
