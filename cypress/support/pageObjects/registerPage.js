@@ -1,3 +1,8 @@
+import {faker} from "@faker-js/faker"
+
+const firstName = faker.person.firstName();
+const lastName = faker.person.lastName();
+
 class registerPage{
     clickSignup () {
         cy.get('a:nth-child(1)').eq(2).should('be.visible').click();
@@ -8,24 +13,15 @@ class registerPage{
     }
 
     inputFirstname () {
-        cy.fixture('../fixtures/register.json').then((regisData) => {
-            const validRegis = Cypress._.sample(regisData.validCredential);
-            cy.get('#firstname').should('be.visible').type(validRegis.firstName);
-        })
+            cy.get('#firstname').should('be.visible').type(firstName);
     }
 
     inputLastname () {
-        cy.fixture('../fixtures/register.json').then((regisData) => {
-            const validCredential = Cypress._.sample(regisData.validCredential);
-            cy.get('#lastname').should('be.visible').type(validCredential.lastName);
-        })
+            cy.get('#lastname').should('be.visible').type(lastName);
     }
 
     inputEmail () {
-        cy.fixture('../fixtures/register.json').then((regisData) => {
-            const validCredential = Cypress._.sample(regisData.validCredential);
-            cy.get('#email_address').should('be.visible').type(validCredential.email);
-        })
+            cy.get('#email_address').should('be.visible').type(`${Date.now()}@mailinator.com`);
     }
 
     inputPassword () {

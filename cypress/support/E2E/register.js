@@ -53,7 +53,7 @@ describe('Register', () => {
         registerPage.successRegist();
     })
 
-    it.only('register password Very Strong', () => {
+    it('register password Very Strong', () => {
         cy.visit('/');
         registerPage.clickSignup();
         registerPage.pageSignup();

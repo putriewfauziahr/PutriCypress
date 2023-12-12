@@ -38,3 +38,5 @@ Cypress.Commands.add('loginWithValidCredentials', () => {
       cy.get('#pass-error').should('be.visible').should('contain', WithoutCredential['error-pass']);
     })
   })
+
+  

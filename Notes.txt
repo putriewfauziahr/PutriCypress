@@ -1,3 +1,13 @@
 .should('be.visible') -> Is a keyword for wait until element locator is visible
 {timeout:5000}        -> Is a keyword for setting timeout
 .trigger('mouseover'); -> Hover
+(`${Date.now()}@mailinator.com`); -> random email using date
+
+import {faker} from "@faker-js/faker"
+
+const firstName = faker.person.firstName();
+const lastName = faker.person.lastName();
+const fakeEmail = `${firstName}@mailinator.com`;
+
+const randomString = Math.random().toString(36).substring(7);
+const email = `test${randomString}@mailinator.com`;
