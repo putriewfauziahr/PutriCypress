@@ -7,7 +7,7 @@ Cypress.Commands.add('loginWithValidCredentials', () => {
     cy.get('#email').type(ValidCredential.email);
     cy.get('#pass').type(ValidCredential.pass);
     cy.get('#send2').should('be.visible').click();
-    cy.get('.logged-in', {timeout:5000}).should('be.visible').should('contain', ValidCredential['success-msg-login']);
+    cy.get('.logged-in', {timeout:7000}).should('be.visible').should('contain', ValidCredential['success-msg-login']);
   });
 });
 

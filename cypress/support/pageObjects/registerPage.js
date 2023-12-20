@@ -21,7 +21,8 @@ class registerPage{
     }
 
     inputEmail () {
-            cy.get('#email_address').should('be.visible').type(`${Date.now()}@mailinator.com`);
+            const randomEmail = Math.random().toString(36).substring(2,15)+"@mailinator.com"
+            cy.get('#email_address').should('be.visible').type(randomEmail);
     }
 
     inputPassword () {
